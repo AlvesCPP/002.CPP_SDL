@@ -76,7 +76,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Github\_Ludus\CPP\002.CPP_SDL\SDL2_image-2.0.4\include;C:\Github\_Ludus\CPP\002.CPP_SDL\SDL2-2.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Github\_Ludus\CPP\002.CPP_SDL\SDL2_image-2.0.4\lib\x86;C:\Github\_Ludus\CPP\002.CPP_SDL\SDL2-2.0.9\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +121,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cGame.cpp" />
+    <ClCompile Include="cGameObject.cpp" />
+    <ClCompile Include="cSprite.cpp" />
+    <ClCompile Include="cVect2D.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cGame.h" />
+    <ClInclude Include="cGameObject.h" />
+    <ClInclude Include="cSprite.h" />
+    <ClInclude Include="cVect2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
